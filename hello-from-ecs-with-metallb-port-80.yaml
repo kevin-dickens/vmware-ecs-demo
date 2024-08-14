@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nginx-helloworld
-        image: alanrenouf/docker-nginx-hello-keswick
+        image: kevindickens/vmware-ecs-demo:v1
         ports:
         - containerPort: 80
 ---
@@ -460,4 +460,4 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 10.151.4.17-10.151.4.18
+      - 192.168.123.200-192.168.123.201
