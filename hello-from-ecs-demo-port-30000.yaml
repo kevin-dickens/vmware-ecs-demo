@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nginx-helloworld
-        image: kevindickens/hello-from-ecs-demo-v1:v1
+        image: kevindickens/hello-from-ecs-demo-v2:v2
         ports:
         - containerPort: 80
 ---
