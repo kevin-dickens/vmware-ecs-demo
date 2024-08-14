@@ -15,11 +15,11 @@ spec:
             "protocol": "NTP",
             "ntp_config": {
               "server": [{
-                  "hostname": "10.151.2.62",
+                  "hostname": "0.pool.ntp.org",
                   "command": "SERVER"
                 },
                 {
-                  "hostname": "10.151.2.190",
+                  "hostname": "1.pool.ntp.org",
                   "command": "SERVER"
                 }
               ]
