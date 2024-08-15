@@ -19,7 +19,7 @@ spec:
                   "command": "SERVER"
                 },
                 {
-                  "hostname": "time-a-g.nist.gov",
+                  "hostname": "1.pool.ntp.org",
                   "command": "SERVER"
                 }
               ]
