@@ -8,8 +8,6 @@ kind: Deployment
 metadata:
   name: hello-world
   namespace: hello-world
-  labels:
-    app: hello-world
 spec:
   selector:
     matchLabels:
