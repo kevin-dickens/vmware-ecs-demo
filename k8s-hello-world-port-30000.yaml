@@ -1,4 +1,20 @@
 apiVersion: v1
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>ECS Pod</title>
+    </head>
+    <body>
+        <p style="font-size: 40px;">HOL ECS deployed NGINX site<p>
+    </body>
+    </html>
+kind: ConfigMap
+metadata:
+  name: index-page-1
+---
+apiVersion: v1
 kind: Namespace
 metadata:
   name: hello-world
@@ -44,19 +60,3 @@ spec:
   - port: 80
     targetPort: 80
     nodePort: 30000
----
-apiVersion: v1
-data:
-  index.html: |
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <title>ECS Pod</title>
-    </head>
-    <body>
-        <p style="font-size: 40px;">HOL ECS deployed NGINX site<p>
-    </body>
-    </html>
-kind: ConfigMap
-metadata:
-  name: index-page-1
