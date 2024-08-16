@@ -11,22 +11,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: Namespace
 metadata:
   name: kubernetes-dashboard
-
 ---
-
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: admin-user
-  namespace: kubernetes-dashboard
-  
+  namespace: kubernetes-dashboard  
 ---
-
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
@@ -39,9 +34,7 @@ subjects:
 - kind: ServiceAccount
   name: admin-user
   namespace: kubernetes-dashboard
-
 ---
-
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -49,9 +42,7 @@ metadata:
     k8s-app: kubernetes-dashboard
   name: kubernetes-dashboard
   namespace: kubernetes-dashboard
-
 ---
-
 kind: Service
 apiVersion: v1
 metadata:
@@ -67,9 +58,7 @@ spec:
     nodePort: 30002
   selector:
     k8s-app: kubernetes-dashboard
-
 ---
-
 apiVersion: v1
 kind: Secret
 metadata:
@@ -80,9 +69,7 @@ metadata:
 type: Opaque
 data:
   csrf: ""
-
 ---
-
 apiVersion: v1
 kind: Secret
 metadata:
@@ -91,9 +78,7 @@ metadata:
   name: kubernetes-dashboard-key-holder
   namespace: kubernetes-dashboard
 type: Opaque
-
 ---
-
 kind: ConfigMap
 apiVersion: v1
 metadata:
@@ -101,9 +86,7 @@ metadata:
     k8s-app: kubernetes-dashboard
   name: kubernetes-dashboard-settings
   namespace: kubernetes-dashboard
-
 ---
-
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -131,9 +114,7 @@ rules:
     resources: ["services/proxy"]
     resourceNames: ["heapster", "http:heapster:", "https:heapster:", "dashboard-metrics-scraper", "http:dashboard-metrics-scraper"]
     verbs: ["get"]
-
 ---
-
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -145,9 +126,7 @@ rules:
   - apiGroups: ["metrics.k8s.io"]
     resources: ["pods", "nodes"]
     verbs: ["get", "list", "watch"]
-
 ---
-
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
@@ -163,9 +142,7 @@ subjects:
   - kind: ServiceAccount
     name: kubernetes-dashboard
     namespace: kubernetes-dashboard
-
 ---
-
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
@@ -178,9 +155,7 @@ subjects:
   - kind: ServiceAccount
     name: kubernetes-dashboard
     namespace: kubernetes-dashboard
-
 ---
-
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -241,9 +216,7 @@ spec:
       tolerations:
         - key: node-role.kubernetes.io/master
           effect: NoSchedule
-
 ---
-
 kind: Service
 apiVersion: v1
 metadata:
@@ -257,9 +230,7 @@ spec:
       targetPort: 8000
   selector:
     k8s-app: dashboard-metrics-scraper
-
 ---
-
 kind: Deployment
 apiVersion: apps/v1
 metadata:
