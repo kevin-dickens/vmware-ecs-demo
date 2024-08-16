@@ -8,7 +8,7 @@ metadata:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
   className: guaranteed-small
-  imageName: https://drive.google.com/drive/folders/1HKtKgdUNxabkmhLSqWOHIzTvtGVdKjj6/photon-web-linux-vm.ova
+  imageName: drive.google.com/drive/folders/1HKtKgdUNxabkmhLSqWOHIzTvtGVdKjj6/photon-web-linux-vm.ova
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
