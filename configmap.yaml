@@ -13,3 +13,4 @@ data:
 kind: ConfigMap
 metadata:
   name: index-page-1
+  namespace: hello-world
