@@ -1,4 +1,13 @@
-#example deployment and post customsiation for Photon VM
+#example deployment and post customization for Photon VM
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachineClass
+metadata:
+  name: small
+spec:
+  hardware:
+    cpus: 2
+    memory: 4Gi
+---
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
