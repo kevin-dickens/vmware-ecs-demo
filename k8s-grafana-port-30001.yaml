@@ -1,3 +1,4 @@
+# CHANGE IP ADDRESS OF PROMETHEUS TO THE ECS WORKERNODE
 apiVersion: v1
 kind: Namespace
 metadata:
