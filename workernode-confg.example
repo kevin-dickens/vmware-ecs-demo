@@ -2,7 +2,7 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachineClass
 metadata:
-  name: best-effort-ec-small
+  name: ec-small
   # No resource requests/reservations.
   # Memory overcommit possible.
 spec:
@@ -13,8 +13,8 @@ spec:
   # needed capabilities to deploy ec worker vm.
   controllerName: vmoperator.vmware.com/ecworker
   hardware:
-    cpus: 4
-    memory: 8Gi
+    cpus: 2
+    memory: 4Gi
 ---
 apiVersion: v1
 kind: Namespace
@@ -27,7 +27,7 @@ metadata:
   name: ec-worker
   namespace: ec-system
 spec:
-  className: best-effort-ec-small
+  className: ec-small
   imageName: ec-wrkr.ova
   powerState: poweredOff
   vmMetadata:
