@@ -10,7 +10,7 @@ spec:
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: photon-vm-static-ip
+  name: photon-linux-vm
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
