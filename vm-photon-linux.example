@@ -24,19 +24,3 @@ spec:
   #vmMetadata:
     #configMapName: user-data-photon
     #transport: CloudInit
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-    name: user-data-photon
-    namespace: default
-data:
-  user-data: |
-    #cloud-config
-    ssh_pwauth: true
-    users:
-      - name: root
-        sudo: ALL=(ALL) NOPASSWD:ALL
-        lock_passwd: false
-        passwd: 'VMware1!'
-        shell: /bin/bash
