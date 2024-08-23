@@ -72,7 +72,7 @@ data:
     The VMware Edge Ochestrator (VECO) launchpad is located here:
     <a href="https://ecs.orchestrator.vmware.com/#/configure/launchpad">VMware VECO Launchpad</a>.</p>
 
-    <p>The web page is hosted on port 30000.<br/>
+    <p>The web page is hosted on port 80.<br/>
     The Grafana with Prometheus dashboard is hosted on port 30001 located here: 
     <a href="http://192.168.123.213:30001">Grafana</a>.<br/>
     The kubernetes dashboard is hosted on port 30002 located here: 
