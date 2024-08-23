@@ -1,7 +1,7 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachineClass
 metadata:
-  name: vm-small
+  name: photon-vm-small
 spec:
   hardware:
     cpus: 2
@@ -15,7 +15,7 @@ metadata:
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
-  className: vm-small
+  className: photon-vm-small
   imageName: 192.168.123.254/downloads/photon-vm-static-ip.ova
   powerState: poweredOn
   networkInterfaces:
