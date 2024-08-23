@@ -14,7 +14,7 @@ spec:
   selector:
     matchLabels:
       app: nginx-hello-ecs
-  replicas: 1 # tells deployment to run 1 pod matching the template
+  replicas: 1
   template:
     metadata:
       labels:
@@ -22,9 +22,16 @@ spec:
     spec:
       containers:
       - name: nginx-helloworld
-        image: kevindickens/vmware-ecs-demo:v1
+        image: nginx:latest
         ports:
         - containerPort: 80
+        volumeMounts:
+          - name: nginx-config
+            mountPath: /usr/share/nginx/html
+      volumes:
+        - name: nginx-config
+          configMap:
+            name: index-page-1
 ---
 apiVersion: v1
 kind: Service
@@ -39,6 +46,46 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
+---
+apiVersion: v1
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+       <title>Edge Compute Stack (ECS) Demo</title>
+       <style>
+       html { color-scheme: light dark; }
+       body { width: 50em; margin: 0 auto;
+       font-family: Tahoma, Verdana, Arial, sans-serif; }
+       </style>
+    </head>
+    <body>
+    <h1>Hello from Edge Compute Stack (ECS)!</h1>
+    <h2>Webpage Version 1.0</h2>
+    <p>If you see this page, the web server is successfully installed and working. This webpage is running from a nginx container hosted on the ECS server or device.</p>
+
+    <p>The ECS Product page is located here:
+    <a href="https://www.vmware.com/products/software-defined-edge/edge-compute/stack">VMware ECS Product Page</a>.<br/>
+    For online documentation please refer to:
+    <a href="https://docs.vmware.com/en/VMware-Edge-Compute-Stack/index.html">VMware ECS Online Documentation</a>.<br/>
+    The VMware Edge Ochestrator (VECO) launchpad is located here:
+    <a href="https://ecs.orchestrator.vmware.com/#/configure/launchpad">VMware VECO Launchpad</a>.</p>
+
+    <p>The web page is hosted on port 30000.<br/>
+    The Grafana with Prometheus dashboard is hosted on port 30001 located here: 
+    <a href="http://192.168.123.213:30001">Grafana</a>.<br/>
+    The kubernetes dashboard is hosted on port 30002 located here: 
+    <a href="http://192.168.123.213:30002">Kubernetes Dashboard</a>.<br/></p>
+
+    <p><em>Thank you for reviewing the VMware by Broadcom ECS demo.</em></p>
+    <p>Version 1.0</p>
+    </body>
+    </html>
+kind: ConfigMap
+metadata:
+  name: index-page-1
+  namespace: hello-ecs
 ---
 apiVersion: v1
 kind: Namespace
