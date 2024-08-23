@@ -76,7 +76,9 @@ data:
     The Grafana with Prometheus dashboard is hosted on port 30001 located here: 
     <a href="http://192.168.123.213:30001">Grafana</a>.<br/>
     The kubernetes dashboard is hosted on port 30002 located here: 
-    <a href="http://192.168.123.213:30002">Kubernetes Dashboard</a>.<br/></p>
+    <a href="http://192.168.123.213:30002">Kubernetes Dashboard</a>.<br/>
+    The Photon Linux VM is hosted on port 80 located here: 
+    <a href="http://192.168.123.215">Photon Linux VM</a>.<br/></p>
 
     <p><em>Thank you for reviewing the VMware by Broadcom ECS demo.</em></p>
     <p>Version 1.0</p>
