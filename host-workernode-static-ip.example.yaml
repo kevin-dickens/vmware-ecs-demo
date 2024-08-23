@@ -1,18 +1,11 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachineClass
 metadata:
-  name: best-effort-ec-small
-  # No resource requests/reservations.
-  # Memory overcommit possible.
+  name: ecshomelab1-small
 spec:
-  # VM operator controller name for VirtualMachine class
-  # is different so addition of controllerName attr with invalid
-  # value makes vm operator ignore this VM CRD instance.
-  # This is majorly done because vm operator doesn't have all the
-  # needed capabilities to deploy ec worker vm.
   controllerName: vmoperator.vmware.com/ecworker
   hardware:
-    cpus: 2
+    cpus: 4
     memory: 8Gi
 ---
 apiVersion: v1
@@ -26,7 +19,7 @@ metadata:
   name: ec-worker
   namespace: ec-system
 spec:
-  className: best-effort-ec-small
+  className: ecshomelab1-small
   imageName: ec-wrkr.ova
   powerState: poweredOff
   vmMetadata:
@@ -45,11 +38,10 @@ data:
             eth0:
                 dhcp: "false"
                 addresses:
-                    - 10.211.34.144/22
+                    - 192.168.123.213/24
                 nameservers:
                     addresses:
-                        - 10.211.56.141
-                        - 10.211.81.141
+                        - 192.168.123.1
                 routes:
                     - to: 0.0.0.0/0
-                      via: 10.211.32.1 
+                      via: 192.168.123.1 
