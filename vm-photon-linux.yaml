@@ -16,7 +16,7 @@ metadata:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
   className: vm-small
-  imageName: http://192.168.123.254:80/downloads/photon-web-linux-vm.ova
+  imageName: 192.168.123.254/downloads/photon-web-linux-vm.ova
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
