@@ -60,7 +60,7 @@ data:
     </head>
     <body>
     <h1>Hello from Edge Compute Stack (ECS)!</h1>
-    <h2>Webpage Version 2.0</h2>
+    <h2>Webpage Version 1.0</h2>
     <p>If you see this page, the web server is successfully installed and working. This webpage is running from a nginx container hosted on the ECS server or device.</p>
 
     <p>The ECS Product page is located here:
@@ -76,7 +76,7 @@ data:
     The kubernetes dashboard is hosted on port 30002.</p>
 
     <p><em>Thank you for reviewing the VMware by Broadcom ECS demo.</em></p>
-    <p>Version 2.0</p>
+    <p>Version 1.0</p>
     </body>
     </html>
 kind: ConfigMap
