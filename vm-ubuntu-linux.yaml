@@ -1,0 +1,23 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachineClass
+metadata:
+  name: ubuntu-vm-small
+spec:
+  hardware:
+    cpus: 2
+    memory: 2Gi
+---
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  name: ubuntu-web-linux-vm
+  namespace: default
+  annotations:
+    vmoperator.vmware.com/image-supported-check: disable
+spec:
+  className: ubuntu-vm-small
+  imageName: 192.168.123.254/downloads/ubuntu-linux-vm-static-ip.ova
+  powerState: poweredOn
+  networkInterfaces:
+  - networkName: "VM Network"
+    ethernetCardType: "e1000"
