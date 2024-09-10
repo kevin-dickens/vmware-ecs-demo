@@ -324,3 +324,47 @@ spec:
     nodePort: 30004
   type: NodePort
 ---
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-us-east-site-01-e101
+  namespace: wind-turbine-demo
+data:
+  SITE_NAME: "us-east-onshore-site-01"
+  TURBINE_NAME: "turbine-e101"
+  TURBINE_INFO: "<b>GaleForce XT</b><br>Rotor:220m<br>Blade:107m<br>Height:260m<br>Capacity:12-14MW"
+  WEBSOCKET_URL: "ws://192.168.123.213:30004/ws"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-api
+  namespace: wind-turbine-demo
+spec:
+  template:
+    spec:
+      containers:
+      - name: backend-api
+        env:
+        - name: SITE_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: backend-us-east-site-01-e101
+              key: SITE_NAME
+        - name: TURBINE_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: backend-us-east-site-01-e101
+              key: TURBINE_NAME
+        - name: TURBINE_INFO
+          valueFrom:
+            configMapKeyRef:
+              name: backend-us-east-site-01-e101
+              key: TURBINE_INFO
+        - name: WEBSOCKET_URL
+          valueFrom:
+            configMapKeyRef:
+              name: backend-us-east-site-01-e101
+              key: WEBSOCKET_URL
+---
