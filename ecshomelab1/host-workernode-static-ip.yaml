@@ -1,0 +1,47 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachineClass
+metadata:
+  name: ecshomelab1-small
+spec:
+  controllerName: vmoperator.vmware.com/ecworker
+  hardware:
+    cpus: 4
+    memory: 8Gi
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ec-system
+---
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  name: ec-worker
+  namespace: ec-system
+spec:
+  className: ecshomelab1-small
+  imageName: ec-wrkr.ova
+  powerState: poweredOff
+  vmMetadata:
+    transport: CloudInit
+    configMapName: worker-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: worker-config
+  namespace: ec-system
+data:
+  networkconfig: |
+        version: 2
+        ethernets:
+            eth0:
+                dhcp: "false"
+                addresses:
+                    - 192.168.123.213/24
+                nameservers:
+                    addresses:
+                        - 192.168.123.1
+                routes:
+                    - to: 0.0.0.0/0
+                      via: 192.168.123.1 
