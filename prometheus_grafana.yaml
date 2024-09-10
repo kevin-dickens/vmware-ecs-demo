@@ -1952,3 +1952,15 @@ data:
       "weekStart": ""
     }
 ---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: grafana-pvc
+  namespace: ecsmonitoring-ns
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
