@@ -184,3 +184,31 @@ spec:
       nodePort: 30777
   type: NodePort
 ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+  namespace: ecsmonitoring-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prometheus
+  template:
+    metadata:
+      labels:
+        app: prometheus
+    spec:
+      serviceAccountName: prometheus
+      containers:
+      - name: prometheus
+        image: prom/prometheus
+        args:
+        - '--web.enable-remote-write-receiver'
+        - '--config.file=/etc/prometheus/prometheus.yml'
+        ports:
+        - containerPort: 9090
+        resources:
+          limits:
+            memory: 2Gi
+---
