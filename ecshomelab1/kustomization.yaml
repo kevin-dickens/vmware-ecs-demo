@@ -3,4 +3,3 @@ kind: Kustomization
 bases:
   - ../base-for-all-ecs-hosts
   - host-workernode-static-ip.yaml
-  - k8s-hello-metallb-port-80.yaml
