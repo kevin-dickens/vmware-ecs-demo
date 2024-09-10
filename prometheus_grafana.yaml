@@ -171,3 +171,16 @@ subjects:
   name: prometheus
   namespace: ecsmonitoring-ns
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-svc
+  namespace: ecsmonitoring-ns
+spec:
+  selector:
+    app: prometheus
+  ports:
+    - port: 9090
+      nodePort: 30777
+  type: NodePort
+---
