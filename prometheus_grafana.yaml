@@ -133,3 +133,9 @@ spec:
   hostPath:
     path: "/tmp/pv"
 ---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: prometheus
+  namespace: ecsmonitoring-ns
+---
