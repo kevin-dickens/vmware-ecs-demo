@@ -2,9 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: monitoring
-  
 ---
- 
 apiVersion: v1
 kind: Service
 metadata:
@@ -18,9 +16,7 @@ spec:
     - name: web
       port: 9090
       targetPort: 9090
- 
 ---
- 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -49,9 +45,7 @@ spec:
         - name: prometheus-config
           configMap:
             name: prometheus-config
- 
----
- 
+--- 
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -65,9 +59,7 @@ data:
       - job_name: 'prometheus'
         static_configs:
         - targets: ['localhost:9090']
- 
 ---
- 
 apiVersion: v1
 kind: Service
 metadata:
@@ -81,9 +73,7 @@ spec:
     - name: web
       port: 3000
       targetPort: 3000
- 
----
- 
+--- 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -109,3 +99,15 @@ spec:
               value: admin
             - name: GF_SECURITY_ADMIN_PASSWORD
               value: admin
+---
+apiVersion: esx.vmware.com/v1alpha1
+kind: HostConfiguration
+metadata:
+  name: ecsmonitoring-metrics
+  namespace: esx-system
+spec:
+  metrics-collection:
+    enabled: true
+    metrics-sink:
+      url: "http://192.168.123.213:30777/api/v1/write"
+      data-format: "prometheusremotewrite"
