@@ -118,3 +118,18 @@ metadata:
   name: ecsmonitoring-ns
 spec: {}
 status: {}
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: grafana-pv
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/tmp/pv"
+---
