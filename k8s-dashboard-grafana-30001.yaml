@@ -1,4 +1,16 @@
 ---
+apiVersion: esx.vmware.com/v1alpha1
+kind: HostConfiguration
+metadata:
+  name: ecsmonitoring-metrics
+  namespace: esx-system
+spec:
+  metrics-collection:
+    enabled: true
+    metrics-sink:
+      url: "http://192.168.123.213:30777/api/v1/write"
+      data-format: "prometheusremotewrite"
+---
 apiVersion: v1
 kind: Namespace
 metadata:
