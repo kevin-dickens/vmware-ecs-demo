@@ -1,4 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
-  - e101-data.yaml
+  - k8s-hello-port-30000-v1.yaml
