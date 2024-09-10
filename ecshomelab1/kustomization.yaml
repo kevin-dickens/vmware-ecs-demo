@@ -4,4 +4,3 @@ bases:
   - ../base-for-all-ecs-hosts
   - host-workernode-static-ip.yaml
   - k8s-dashboard-grafana-30001.yaml
-  - k8s-dashboard-kube-30002.yaml
