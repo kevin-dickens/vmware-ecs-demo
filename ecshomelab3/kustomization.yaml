@@ -3,3 +3,5 @@ kind: Kustomization
 bases:
   - 10-ns.yaml
   - 20-pv.yaml
+  - 30-prometheus.yaml
+  - 00-ecs-config.yaml
