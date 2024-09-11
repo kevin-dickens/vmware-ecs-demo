@@ -78,7 +78,7 @@ data:
     The kubernetes dashboard is hosted on port 30002 located here: 
     <a href="http://192.168.123.213:30002">Kubernetes Dashboard</a>.<br/>
     The Wind Turbine Demo dashboard is hosted on port 30005 located here: 
-    <a href="http://192.168.123.213:30005">Kubernetes Dashboard</a>.<br/>
+    <a href="http://192.168.123.213:30005">Wind Turbine Demo Dashboard</a>.<br/>
     The Photon Linux VM is hosted on port 80 located here: 
     <a href="http://192.168.123.215">Photon Linux VM</a>.<br/></p>
 
