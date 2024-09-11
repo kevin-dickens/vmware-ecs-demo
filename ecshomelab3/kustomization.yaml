@@ -5,3 +5,5 @@ bases:
   - 20-pv.yaml
   - 30-prometheus.yaml
   - 00-ecs-config.yaml
+  - 40-grafana-cm.yaml
+  - 50-grafana.yaml
