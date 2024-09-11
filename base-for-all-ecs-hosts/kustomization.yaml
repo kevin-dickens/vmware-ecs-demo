@@ -4,3 +4,4 @@ bases:
   - host-ntp-config.yaml
   - k8s-hello-port-30000-v1.yaml
   - k8s-dashboard-kube-30002.yaml
+  - vm-photon-linux.yaml
