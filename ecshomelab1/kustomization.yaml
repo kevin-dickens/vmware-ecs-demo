@@ -10,3 +10,4 @@ bases:
   - 00-ecs-config.yaml
   - 10-ns.yaml
   - 20-pv.yaml
+  - 30-prometheus.yaml
