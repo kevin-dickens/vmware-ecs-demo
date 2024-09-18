@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
   - k8s-00-prometheus-grafana.yaml
-  - 10-ns.yaml
+  - k8s-01-ecsmonitoring-ns.yaml
   - 20-pv.yaml
   - 30-prometheus.yaml
   - 40-grafana-cm.yaml
