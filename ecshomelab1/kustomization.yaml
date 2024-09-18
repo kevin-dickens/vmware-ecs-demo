@@ -7,5 +7,5 @@ bases:
   - prometheus_grafana.yaml
   #- k8s-dashboard-grafana-30001.yaml
   - ../wind-tunnel-demo/us-east-onshore-site-01/turbine-e101
-  #- ai-edge-01.yaml
+  - 00-ecs-config.yaml
   
