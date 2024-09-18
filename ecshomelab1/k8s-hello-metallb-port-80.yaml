@@ -74,11 +74,11 @@ data:
 
     <p>The web page is hosted on port 80.<br/>
     The Grafana with Prometheus dashboard is hosted on port 30001 located here: 
-    <a href="http://192.168.123.213:30001">Grafana</a>.<br/>
+    <a href="http://192.168.123.213:30001">Grafana with Prometheus</a>.<br/>
     The kubernetes dashboard is hosted on port 30002 located here: 
     <a href="http://192.168.123.213:30002">Kubernetes Dashboard</a>.<br/>
-    The Computer Vision dashboard is hosted on port 30888 located here: 
-    <a href="http://192.168.123.213:30888">Computer Vision App</a>.<br/>
+    The Computer Vision dashboard is hosted on port 30003 located here: 
+    <a href="http://192.168.123.213:30003">Computer Vision App</a>.<br/>
     The Wind Turbine Demo dashboard is hosted on port 30005 located here: 
     <a href="http://192.168.123.213:30005">Wind Turbine Demo Dashboard</a>.<br/></p>
 
