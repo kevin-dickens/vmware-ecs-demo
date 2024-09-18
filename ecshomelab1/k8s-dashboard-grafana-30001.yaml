@@ -1850,7 +1850,6 @@ data:
       "weekStart": ""
     }
 ---
----
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
