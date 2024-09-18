@@ -9,3 +9,4 @@ bases:
   - ../wind-tunnel-demo/us-east-onshore-site-01/turbine-e101
   - 00-ecs-config.yaml
   - 10-ns.yaml
+  - 20-pv.yaml
