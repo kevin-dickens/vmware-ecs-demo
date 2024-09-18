@@ -90,7 +90,7 @@ spec:
   ports:
     - port: 3000
       protocol: TCP
-      nodePort: 30888
+      nodePort: 30001
   selector:
     app: grafana
   type: NodePort
