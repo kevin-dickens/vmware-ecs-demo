@@ -5,6 +5,5 @@ bases:
   - k8s-01-ecsmonitoring-ns.yaml
   - k8s-20-persistent-volume.yaml
   - k8s-30-prometheus.yaml
-  #- k8s-40-grafana-configmap.yaml
-  - 40-grafana-cm.yaml
+  - k8s-40-grafana-configmap.yaml
   - k8s-50-grafana.yaml
