@@ -8,4 +8,4 @@ bases:
   #- k8s-dashboard-portainer-30003.yaml
   - k8s-computer-vision-app.yaml
   #- vm-photon-linux.yaml
-  - vm-ubuntu-linux.yaml
+  #- vm-ubuntu-linux.yaml
