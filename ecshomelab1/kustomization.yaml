@@ -8,3 +8,5 @@ bases:
   #- k8s-dashboard-grafana-30001.yaml
   - ../wind-tunnel-demo/us-east-onshore-site-01/turbine-e101
   - ../monitoring
+  - vm-photon-linux-static-ip.yaml
+  
