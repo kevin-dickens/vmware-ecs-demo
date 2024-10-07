@@ -16,7 +16,7 @@ metadata:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
   className: ubuntu-vm-small
-  imageName: 192.168.123.254/downloads/vm-ubuntu-web-linux.ova
+  imageName: 192.168.123.254/downloads/vm-ubuntu-linux.ova
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
