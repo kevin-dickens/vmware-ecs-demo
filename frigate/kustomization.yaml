@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
   - mediatx.yaml
-  #- ffmpeg-yt.yaml
-  #- frigate-local.yaml
+  - ffmpeg-yt.yaml
+  - frigate-local.yaml
   - home_metallb.yaml
   #- ffmpeg-box.yaml
