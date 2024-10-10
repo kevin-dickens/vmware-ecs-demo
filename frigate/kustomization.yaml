@@ -4,5 +4,5 @@ bases:
   - mediatx.yaml
   #- ffmpeg-yt.yaml
   #- frigate-local.yaml
-  #- home_metallb.yaml
+  - home_metallb.yaml
   #- ffmpeg-box.yaml
