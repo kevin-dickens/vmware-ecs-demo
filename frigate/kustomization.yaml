@@ -6,3 +6,4 @@ bases:
   - frigate-local.yaml
   - home_metallb.yaml
   #- ffmpeg-box.yaml
+  - k8-dashboard.yaml
