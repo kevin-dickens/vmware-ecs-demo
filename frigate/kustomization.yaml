@@ -4,6 +4,6 @@ bases:
   - home_metallb.yaml
   - mediatx.yaml
   - ffmpeg-yt.yaml
-  #- frigate-local.yaml
+  - frigate-local.yaml
   #- ffmpeg-box.yaml
   #- k8-dashboard.yaml
