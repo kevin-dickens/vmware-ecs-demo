@@ -1,1 +1,8 @@
-
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachineClass
+metadata:
+  name: vm-small
+spec:
+  hardware:
+    cpus: 2
+    memory: 2Gi
