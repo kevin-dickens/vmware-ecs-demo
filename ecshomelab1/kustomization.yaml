@@ -9,5 +9,5 @@ bases:
   #- ../wind-tunnel-demo/us-east-onshore-site-01/turbine-e101
   #- ../monitoring
   #- ../frigate
-  - vm-photon-linux-static-ip.yaml
+  #- vm-photon-linux-static-ip.yaml
   
