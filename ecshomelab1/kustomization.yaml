@@ -3,11 +3,11 @@ kind: Kustomization
 bases:
   - ../base-for-all-ecs-hosts
   - host-workernode-static-ip.yaml
-  #- k8s-hello-metallb-port-80.yaml
+  - k8s-hello-metallb-port-80.yaml
   #- host-monitoring-ecshost-config.yaml
   #- k8s-dashboard-grafana-30001.yaml
   #- ../wind-tunnel-demo/us-east-onshore-site-01/turbine-e101
   #- ../monitoring
-  - ../frigate
+  #- ../frigate
   #- vm-photon-linux-static-ip.yaml
   
