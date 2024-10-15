@@ -10,37 +10,14 @@ spec:
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: photon-linux-vm
+  name: vm-photon-server
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
   className: vm-small
-  imageName: packages.vmware.com/photon/4.0/GA/ova/photon-hw11-4.0-1526e30ba0.ova
+  imageName: 192.168.123.254/downloads/photon-web-linux-vm.ova
   powerState: poweredOn
   networkInterfaces:
-  - networkName: "VM Network"
-    ethernetCardType: "vmxnet3"
-  vmMetadata:
-    transport: CloudInit
-    configMapName: photon-linux-config
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: photon-linux-config
-  namespace: default
-data:
-  networkconfig: |
-        version: 2
-        ethernets:
-            eth0:
-                dhcp: "false"
-                addresses:
-                    - 192.168.123.215/24
-                nameservers:
-                    addresses:
-                        - 192.168.123.1
-                routes:
-                    - to: 0.0.0.0/0
-                      via: 192.168.123.1 
+  - networkName: VM Network
+    ethernetCardType: vmxnet3
