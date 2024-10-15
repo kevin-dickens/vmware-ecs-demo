@@ -17,7 +17,8 @@ metadata:
 spec:
   className: vm-small
   imageName: 192.168.123.254/downloads/vm-ubuntu-server.ova
-  powerState: poweredOn
   networkInterfaces:
   - networkName: VM Network
     ethernetCardType: e1000
+  powerState: poweredOn
+---
