@@ -10,4 +10,4 @@ bases:
   #- ../monitoring
   #- ../frigate
   #- vm-photon-server.yaml
-  - vm-ubuntu-server.yaml
+  #- vm-ubuntu-server.yaml
