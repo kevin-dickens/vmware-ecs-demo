@@ -10,4 +10,4 @@ bases:
   #- ../monitoring
   #- ../frigate
   #- vm-photon-linux-static-ip.yaml
-  - vm-ubuntu-server.yaml
+  #- vm-ubuntu-server.yaml
