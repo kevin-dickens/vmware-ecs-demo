@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+bases:
+  - k8s-00-prometheus-grafana.yaml
+  - k8s-01-ecsmonitoring-ns.yaml
+  - k8s-20-persistent-volume.yaml
+  - k8s-30-prometheus.yaml
+  - k8s-40-grafana-configmap.yaml
+  - k8s-50-grafana.yaml
