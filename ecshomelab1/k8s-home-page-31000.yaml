@@ -79,7 +79,9 @@ data:
     <a href="http://192.168.123.213:30005">Wind Turbine Demo Dashboard</a>.<br/>
     The Computer Vision dashboard is hosted on port 30006 located here: 
     <a href="http://192.168.123.213:30006">Computer Vision App</a>.<br/>
-     The Object Detection App is hosted on port 30850 located here: 
+    The Frigate Video Streaming and Detction App is hosted on port 30778 located here: 
+    <a href="http://192.168.123.213:30778">Frigate Video Streaming and Detection App</a>.<br/>
+    The Object Detection App is hosted on port 30850 located here: 
     <a href="http://192.168.123.213:30850">Object Detection App</a>.<br/>
     The Photon Linux Demo dashboard is hosted on port 80 located here: 
     <a href="http://192.168.123.91:80">Photon Linux</a>.<br/>
