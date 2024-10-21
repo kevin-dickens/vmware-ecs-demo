@@ -3,4 +3,4 @@ kind: Kustomization
 bases:
   - backend.yaml
   - frontend.yaml
-  - workernode-config.yaml
+  #- workernode-config.yaml
