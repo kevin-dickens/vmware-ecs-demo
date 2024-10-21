@@ -9,5 +9,6 @@ bases:
   #- ../wind-tunnel-demo/us-east-onshore-site-01/turbine-e101
   #- ../monitoring
   #- ../frigate
+  - ../real-time-object-detection
   #- vm-photon-server.yaml
   #- vm-ubuntu-server.yaml
