@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mediatx
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mediatx
+  namespace: mediatx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mediatx
+  template:
+    metadata:
+      labels:
+        app: mediatx
+    spec:
+      containers:
+      - name: mediatx
+        image: bluenviron/mediamtx
+        ports:
+        - containerPort: 8554
+        env:
+        - name: MTX_PROTOCOLS
+          value: "tcp"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mediatx-svc
+  namespace: mediatx
+  annotations:
+    metallb.universe.tf/loadBalancerIPs: 192.168.123.214
+spec:
+  selector:
+    app: mediatx
+  ports:
+  - protocol: TCP
+    port: 8554
+    name: rtsp
+  type: LoadBalancer
