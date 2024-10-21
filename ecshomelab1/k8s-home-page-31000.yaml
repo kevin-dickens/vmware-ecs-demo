@@ -70,6 +70,21 @@ data:
     The VMware Edge Ochestrator (VECO) launchpad is located here:
     <a href="https://ecs.orchestrator.vmware.com/#/configure/launchpad">VMware VECO Launchpad</a>.</p>
 
+    <p>The web page is hosted on port 31000.<br/>
+    The Grafana with Prometheus dashboard is hosted on port 30001 located here: 
+    <a href="http://192.168.123.213:30001">Grafana with Prometheus</a>.<br/>
+    The kubernetes dashboard is hosted on port 30002 located here: 
+    <a href="http://192.168.123.213:30002">Kubernetes Dashboard</a>.<br/>
+    The Wind Turbine Demo dashboard is hosted on port 30005 located here: 
+    <a href="http://192.168.123.213:30005">Wind Turbine Demo Dashboard</a>.<br/>
+    The Computer Vision dashboard is hosted on port 30006 located here: 
+    <a href="http://192.168.123.213:30006">Computer Vision App</a>.<br/>
+     The Object Detection App is hosted on port 30850 located here: 
+    <a href="http://192.168.123.213:30850">Object Detection App</a>.<br/>
+    The Photon Linux Demo dashboard is hosted on port 80 located here: 
+    <a href="http://192.168.123.91:80">Photon Linux</a>.<br/>
+    </p>
+
     <p><em>Thank you for reviewing the VMware by Broadcom ECS demo.</em></p>
     <p>Version 1.0</p>
     </body>
