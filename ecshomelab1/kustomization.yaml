@@ -5,8 +5,8 @@ bases:
   - host-workernode-static-ip.yaml
   #- k8s-hello-metallb-port-80.yaml
   #- host-monitoring-prometheus-config.yaml
-  #- ../wind-turbine-demo/us-east-onshore-site-01/turbine-e101
   #- ../monitoring-with-grafana
+  #- ../wind-turbine-demo/us-east-onshore-site-01/turbine-e101
   - ../frigate-with-streaming-video
   #- ../real-time-object-detection
   #- vm-photon-server.yaml
