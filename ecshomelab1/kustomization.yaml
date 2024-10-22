@@ -8,7 +8,7 @@ bases:
   - host-monitoring-prometheus-config.yaml
   #- ../monitoring-with-grafana
   #- ../wind-turbine-demo/us-east-onshore-site-01/turbine-e101
-  - ../frigate-with-streaming-video
+  #- ../frigate-with-streaming-video
   #- ../real-time-object-detection
   #- vm-photon-server.yaml
   #- vm-ubuntu-server.yaml
