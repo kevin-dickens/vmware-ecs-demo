@@ -16,7 +16,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/tmp/pv"
+    path: "/tmp/frigate-pv"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
